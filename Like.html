@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Social-App</title>
+    <link rel="icon" href="Images/png.png" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="Js/angular.min.js" type="text/javascript"></script>
+    <script src="Js/App.js" type="text/javascript"></script>
+</head>
+<body>
+  
+    <div class="container" ng-controller="_techController">
+        <table class="table table-responsive table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Like's</th>
+                    <th>DisLike's</th>
+                    <th>Like's/DisLike's</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+                <tr ng-repeat="technology in technologies">
+                    <td>{{technology.Name}}</td>
+                    <td>{{technology.Likes}}</td>
+                    <td>{{technology.Dislikes}}</td>
+                    <td>
+                        <span class="fa fa-thumb"></span><input type="button" class="btn btn-success" value="Like" ng-click="incrementLikes(technology)" />
+                        <input type="button" class="btn btn-danger" value="Dislike" ng-click="disLikes(technology)" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

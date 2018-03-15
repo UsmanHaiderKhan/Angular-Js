@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nested</title>
+    <link rel="icon" href="Images/png.png" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="Js/angular.min.js" type="text/javascript"></script>
+    <script src="Js/App.js" type="text/javascript"></script>
+</head>
+<body> 
+ <nav class="text-center nav navbar">Angular-Js</nav>
+    <div class="container" ng-controller="cityController">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="country in countries">
+                {{country.Name}}
+    
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="city in country.Cities">
+                        {{city.Name}}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
