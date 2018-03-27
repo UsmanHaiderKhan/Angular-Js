@@ -1,3 +1,5 @@
+///<reference path="angular.min.js"/>
+/// <autosync enabled="true" />
 var myApp = angular.module('app', []);
 
 myApp.controller("mycontrol", function ($scope) {
@@ -126,4 +128,25 @@ myApp.controller("sortingControl", function ($scope) {
     }
 });
 
+myApp.controller("customFilters", function ($scope) {
+    var employees = [
+        { Name: "Usman", Salary: 5500, Gender: "Male" },
+        { Name: "Haider", Salary: 8800, Gender: "Female" },
+        { Name: "Umer", Salary: 5780, Gender: "Male" },
+        { Name: "Saim", Salary: 5560, Gender: "Male" },
+        { Name: "Khan", Salary: 5340, Gender: "Female" },
+        { Name: "Salman", Salary: 9670, Gender: "Male" }
+    ];
+    $scope.employees = employees;
+});
 
+myApp.controller("showHideCtlr", function ($scope) {
+    var employees = [
+        { Name: "Usman", Salary: 5500, DateofBirth: new Date("August 23,1997"), Gender: "Male" },
+        { Name: "Umer", Salary: 6500, DateofBirth: new Date("August 23,1997"), Gender: "FeMale" },
+        { Name: "Saim", Salary: 7500, DateofBirth: new Date("August 23,1997"), Gender: "Male" },
+        { Name: "Usama", Salary: 8500, DateofBirth: new Date("August 23,1997"), Gender: "FeMale" },
+        { Name: "Salman", Salary: 1500, DateofBirth: new Date("August 23,1997"), Gender: "Male" }
+    ];
+    $scope.employees = employees;
+});
