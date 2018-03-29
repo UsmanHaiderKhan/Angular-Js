@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ng-Init Directive</title>
+    <link rel="icon" href="Images/png.png" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="Js/angular.min.js" type="text/javascript"></script>
+    <script src="Js/App.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <!-- <div class="container" ng-init="employees = [
+        { Name:  'Usman', Salary: 5500, DateofBirth: new Date('August 23,1997' ), Gender: 'Male' },
+        { Name: 'Umer', Salary: 6500, DateofBirth: new Date('August 23,1999'), Gender: 'FeMale' },
+        { Name: 'Saim', Salary: 7500, DateofBirth: new Date('August 23,1997'), Gender: 'Male' },
+        { Name: 'Usama', Salary: 8500, DateofBirth: new Date('August 23,1997'), Gender: 'FeMale'},
+        { Name: 'Salman', Salary: 1500, DateofBirth: new Date('August 23,1997'), Gender: 'Male' }
+    ]">
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Salary</th>
+                    <th>Date-of-Birth</th>
+                    <th>Gender</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees">
+                    <td>{{employee.Name}}</td>
+                    <td>{{employee.Salary}}</td>
+                    <td>{{employee.DateofBirth}}</td>
+                    <td>{{employee.Gender}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+    <div class="container" ng-controller="controllerCity">
+
+        <ul>
+            <li ng-repeat="country in countries" ng-init="parentIndex=$index">
+                {{country.Name}}
+                <ul>
+                    <li ng-repeat="city in country.cities">
+                        {{city.Name}},Parent Index={{parentIndex}} , Index={{$index}}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

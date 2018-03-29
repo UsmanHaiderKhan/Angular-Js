@@ -140,6 +140,7 @@ myApp.controller("customFilters", function ($scope) {
     $scope.employees = employees;
 });
 
+
 myApp.controller("showHideCtlr", function ($scope) {
     var employees = [
         { Name: "Usman", Salary: 5500, DateofBirth: new Date("August 23,1997"), Gender: "Male" },
@@ -149,4 +150,43 @@ myApp.controller("showHideCtlr", function ($scope) {
         { Name: "Salman", Salary: 1500, DateofBirth: new Date("August 23,1997"), Gender: "Male" }
     ];
     $scope.employees = employees;
+});
+
+
+myApp.controller("controllerCity", function ($scope) {
+    var countries = [
+        {
+            Name: "Pakistan",
+            cities: [
+                { Name: "Lahore" },
+                { Name: "Islamabad" },
+                { Name: "Karachi" },
+                { Name: "Peshaware" },
+                { Name: "Multan" }
+            ]
+        },
+        {
+            Name: "Turkey",
+            cities: [
+                { Name: "Izimer" },
+                { Name: "Ankara" }
+            ]
+        }
+
+
+    ]
+    $scope.countries = countries;
+});
+
+myApp.controller("includeContrller", function ($scope) {
+    var employees = [
+        { Name: "Usman", Salary: 5500, Gender: "Male" },
+        { Name: "Haider", Salary: 8800, Gender: "Female" },
+        { Name: "Umer", Salary: 5780, Gender: "Male" },
+        { Name: "Saim", Salary: 5560, Gender: "Male" },
+        { Name: "Khan", Salary: 5340, Gender: "Female" },
+        { Name: "Salman", Salary: 9670, Gender: "Male" }
+    ];
+    $scope.employees = employees;
+    $scope.employeesView = "Employee.html";
 });
